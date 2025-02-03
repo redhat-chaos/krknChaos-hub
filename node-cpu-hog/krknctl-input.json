@@ -12,8 +12,7 @@
 	   "short_description":"Number of cores",
         "description":"Number of cores (workers) of node CPU to be consumed",
         "variable":"NODE_CPU_CORE",
-        "type":"number",
-        "default":"2"
+        "type":"number"
     },
     {
 	   "name":"cpu-percentage",
