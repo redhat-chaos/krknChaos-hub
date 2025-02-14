@@ -18,9 +18,8 @@ envsubst < $KRAKEN_FOLDER/scenarios/kube/cpu-hog.yml.template > $KRAKEN_FOLDER/s
 cat $KRAKEN_FOLDER/scenarios/kube/cpu-hog.yml
 # Substitute config with environment vars defined
 envsubst < $KRAKEN_FOLDER/config/config.yaml.template > $KRAKEN_FOLDER/config/cpu_config.yaml
-echo $KRAKEN_FOLDER
+
 checks
-config_setup
 
 # Run Kraken
 cd $KRAKEN_FOLDER

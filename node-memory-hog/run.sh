@@ -18,8 +18,6 @@ envsubst < $KRAKEN_FOLDER/scenarios/kube/memory-hog.yml.template > $KRAKEN_FOLDE
 envsubst < $KRAKEN_FOLDER/config/config.yaml.template > $KRAKEN_FOLDER/config/mem-config.yaml
 
 checks
-config_setup
-
 
 # Run Kraken
 cd $KRAKEN_FOLDER

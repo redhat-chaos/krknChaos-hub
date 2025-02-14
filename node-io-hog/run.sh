@@ -13,12 +13,11 @@ if [[ $KRKN_DEBUG == "True" ]];then
   set -ex
 fi
 
-
 envsubst < $KRAKEN_FOLDER/scenarios/kube/io-hog.yml.template > $KRAKEN_FOLDER/scenarios/kube/io-hog.yml
 # Substitute config with environment vars defined
 envsubst < $KRAKEN_FOLDER/config/config.yaml.template > $KRAKEN_FOLDER/config/io-config.yaml
+
 checks
-config_setup
 
 # Run Kraken
 cd $KRAKEN_FOLDER
@@ -29,5 +28,3 @@ if [[ $KRKN_DEBUG == "True" ]];then
 fi
 
 python3.9 run_kraken.py --config=config/io-config.yaml
-
-
